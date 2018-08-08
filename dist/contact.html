@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Paraliza sna</title>
+  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <!--Import materialize.css-->
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link rel="stylesheet" href="main.css">
+ 
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+</head>
+<body id="wrapper">
+  
+  <div id="particles-js">
+      <div class="container" id="contact">
+        <div class="row">
+          <div class="col s12 m6 offset-m3">
+            <div class="card-panel z-depth-5 transparent">
+              <div class="contact">
+                <h5 class="text-flow">Popuni polja! Firebase.js radi!</h5>
+                <br>
+                <div class="alert">Your message has been sent</div>
+                <br>
+                 <form id="contactForm" name='name'>
+                 <p>
+                  <label>Name</label>
+                  <input type="text" class="input" id='name' required>
+                 </p>     
+               <p>
+                    <label>Email Address</label>
+                    <input type="email" class="input"id='email' required>
+                </p>
+                 <p>
+                   <label>Phone</label>
+                   <input type="text" class="input" id='phone'>
+                </p>                 
+                <p class="full">
+                 <label>Message</label>
+                  <textarea name="message" rows='5' id='message'></textarea>
+                </p> 
+                <p class="full">    
+                 <input type="submit" value="Pošalji" class="btn waves-effect waves-light transparent white-text">
+                </p> 
+              
+              </form>
+              </div>
+      
+            </div>
+          </div>
+        </div>
+      </div>
+    
+  
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+<script>
+
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA6WbFjn6uyOI9EkKGMAAvGpbN8fo-e4cU",
+    authDomain: "paralizasna.firebaseapp.com",
+    databaseURL: "https://paralizasna.firebaseio.com",
+    projectId: "paralizasna",
+    storageBucket: "",
+    messagingSenderId: "910296279501"
+  };
+  firebase.initializeApp(config);
+
+  // create table in Firebase
+
+  var messageRef = firebase.database().ref('messages');
+
+  document.getElementById('contactForm').addEventListener('submit', submitForm)
+
+function submitForm(e){
+
+
+e.preventDefault()
+
+ var name = getInputVal('name');
+ var email = getInputVal('email');
+ var phone = getInputVal('phone');
+ var message = getInputVal('message');
+
+ saveMessage(name, email, phone, message)
+
+
+}
+// fun to get form value
+
+function getInputVal(id) {
+  return document.getElementById(id).value  
+}
+
+// save message
+
+
+function saveMessage(name, email, phone, message) {
+  
+  var newMessegeRef = messageRef.push();
+
+  newMessegeRef.set({
+    name:name,
+    email:email,
+    phone:phone,
+    message:message
+  })
+
+  document.querySelector('.alert').style.display = 'block'
+
+  // hide
+
+  setTimeout(() =>{
+
+  document.querySelector('.alert').style.display = 'none';
+    window.location.reload();
+  },3000)
+
+
+}
+</script> 
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS.load('particles-js', 'particles.json', function(){
+      console.log('particles.json loaded...');
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Blog</title>
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+	<link rel="stylesheet" href="darkside.css" />
+	<style>
+	</style>
+</head>
+
+<body>
+	<div class="panel">
+		<img id="bg" src="img/witch.jpg" width="760" height="225">
+		<img id="logo" src="img/logo.png" width="180" height="110">
+		<div id="firstPage">
+				<a href="index.html">
+					<img src="img/arrow2.png" width="100px"/>
+				</a>
+			</div>
+	</div>
+	<div id="content">
+		<div class="row">
+			<div class="col s12 m6">
+				<a href="demons.html">
+					<div class="card transparent">
+						<div class="card-content  white-text">
+							<span class="card-title">Demoni</span>
+							<p>Dolaze nepozvani u vaš dom? Sede na vašim grudima? Krecu se po kući? Pali su sa neba, a sada progone vas?</p>
+						</div>
+				</a>
+				</div>
+			</div>
+			<div class="col s12 m6">
+				<a href="witch.html">
+					<div class="card transparent">
+						<div class="card-content white-text">
+							<span class="card-title">Vestice</span>
+							<p>Bacila je na vas čini? Videli ste je da jaše na metli?Da li igra oko vatre i juri da pojede Ivicu i Maricu?</p>
+						</div>
+				</a>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s12 m6">
+				<a href="haunted.html">
+
+					<div class="card transparent">
+						<div class="card-content white-text">
+							<span class="card-title">Ukleta kuća</span>
+							<p>Da li vam lupaju prozori po kući? Da li se vrata sama zatvaraju? Noću dok spavate čujete glasove svuda oko vas?</p>
+						</div>
+				</a>
+				</div>
+			</div>
+			<div class="col s12 m6">
+				<a href="alien.html">
+
+					<div class="card transparent">
+						<div class="card-content white-text">
+							<span class="card-title">NLO</span>
+							<p>Mnogo ljudi je prijavilo da su ih oteli vanzemaljci, da li ste jedan od njih? Da li ste ih videli? </p>
+						</div>
+				</a>
+				</div>
+			</div>
+
+		</div>
+		<!-- load scripts after dom has been rendered -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenLite.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/easing/EasePack.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/CSSPlugin.min.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+		<script>
+			TweenLite.from('#bg', 1, {
+				opacity: 0
+			});
+			TweenLite.from('#logo', 1, {
+				x: -200,
+				rotation: -90,
+				scale: 0,
+				ease: Back.easeOut,
+				delay: 1
+			});
+			TweenLite.from('#firstPage', 1, {
+				x: 100,
+				opacity: 0,
+				ease: Back.easeOut,
+				delay: 2
+			});
+			TweenLite.from('#content', .5, {
+				opacity: 0,
+				y: 100,
+				delay: 3
+			});
+		</script>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Snovi</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    crossorigin="anonymous">
+  <style>
+    body {
+      background: url(img/bg-dream2.jpg);
+      background-position: center;
+      background-size: cover;
+     
+      background-repeat: no-repeat;
+      overflow-y:hidden !important;
+
+
+
+    }
+    .container {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+     
+    }
+    h4 {
+      color: #4073dc;
+    }
+    .hide {
+      display: none;
+      background: #dfba71;
+      padding: 20px;
+      color:white;
+      width:60%;
+      margin:130px auto;
+    }
+     #dream{
+       border:2px solid;
+     } 
+
+    input:focus:valid{
+      background: yellowgreen;
+    }
+
+  
+  </style>
+
+  <body>
+  
+  
+    <div class="container has-text-centered">
+     <h3 class="title hide"></h3>
+     
+      <div class="columns">
+        <div class="column">
+          <form id="form" class="is-fixed-bootom">
+
+            <div class="field has-addons">
+              <div class="control has-icons-left has-icons-right is-horizontal">
+                <input class="input is-large" type="text" placeholder="Upisi svoj san" id="dream" required>
+                <span class="icon is-medium is-left">
+                  <i class="fas fas fa-cloud fa-lg"></i>
+                </span>
+                <span class="icon is-medium is-right">
+                  <i class="fas fa-check fa-lg"></i>
+                </span>
+              </div>
+              <div class="control">
+                <input type="submit" value="Da li će se san ostvariti?" class="button is-info is-large is-outlined" id="submited">
+                </a>
+              </div>
+              <h1 class="title"></h1>
+            </div>
+         </form>
+        
+        </div>
+        <div class="has-text-centered arrow">
+          <a href="index.html">
+            <img src="img/arrow2.png" width="100px" />
+          </a>
+        </div>
+
+
+      </div>
+      <script>
+        // Declaring Variables
+      let form = document.querySelector('#form'),
+          submited = document.querySelector('#submited'),
+          dream = document.querySelector('#dream'),
+          hide = document.querySelector('.hide');
+
+
+        //  Submitting Form
+        form.addEventListener('submit', ((e) => {
+
+          hide.style.display = 'block'
+          hide.textContent = "Da li hoće sločne u lonče?" 
+          dream.value = '';
+          form.style.display="none";
+          setTimeout(() => {
+            hide.style.visibility = 'hidden';
+            window.location.reload();
+          }, 3000)
+
+      
+          e.preventDefault();
+        }))
+      </script>
+  </body>
+
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "dreamoff",
+  "version": "1.0.0",
+  "description": "\"Dream OFF\"",
+  "main": "index.js",
+  "homepage":"https://marcojovanovic.github.io/DreamOff",
+  "scripts": {
+    "deploy":"gh-pages -d dist"
+  },
+  "author": "\"Marko Jovanovic\"",
+  "license": "ISC"
+}
