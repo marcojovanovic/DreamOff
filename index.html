@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Clouds</title>
+  <!-- Compiled and minified CSS -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <link rel="stylesheet" href="main.css"/>
+  <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+</head>
+<body>
+          
+          <div class="clouds">
+            <img src="img/cloud1.png"  class="one"alt="" />
+            <img src="img/cloud3.png" class="two" alt="" />
+            <img src="img/cloud4.png"  class="three"alt="" />
+            <img src="img/cloud5.png"  class="four"alt="" />
+            <img src="img/cloud6.png" class="five" alt="" />
+            <img src="img/cloud7.png"  class="eight"alt="" />
+            <img src="img/cloud8.png"  class="six"alt="" />
+            <img src="img/cloud9.png" class="seven" alt="" />
+           </div>
+
+            <div class="kontejner">
+              <div class="row">
+                <div class="col s12 m6 l3">
+                    <div class="card transparent">
+                        <a href="blueBlog.html" class="white-text">
+                        <div class="card-content white-text">
+                          <span class="card-title white-text">Blog</span>
+                          <p>Sve sto ste hteli da znate o snovima a niste znali koga da pitate. Medicina ima odgovor na taj fenomen! </p>
+                        </div>
+                       </a>
+                      </div>
+                    </div>
+                      <div class="col s12 m6 l3">
+                      <div class="card transparent">
+                          <div class="card-content">
+                            <a href="tamna strana.html" class="white-text">
+
+                           <span class="card-title white-text">Tamna Strana</span>
+                            <p>Da li je Paraliza sna odgovorna za verovanje u vanzemaljce, veštice, demone i druga bića? Mi tako mislimo.</p>
+                            </a>                       
+                          </div>                     
+                        </div>
+                      </div> 
+                    <div id="cloud">
+                         <img src="img/logos.png" class="responsive-img imgs"/>  
+                       </div>  
+                  </div>
+                 <div class="row">
+                    <div class="col s12 m6 l3">
+                        <div class="card transparent">
+                            <div class="card-content">
+                              <a href="snovi.html" class="white-text">
+                                <span class="card-title white-text">Snovi</span>
+                              <p>Kakve su šanse da se vaši snovi il ciljevi ispune? Pitajte nas, odmah stiže odgovor </p>
+                              </a>                            
+                            </div>                         
+                          </div>
+                        </div>
+                        <div class="col s12 m6 l3">
+                          <div class="card transparent">
+                              <div class="card-content">
+                                  <a href="contact.html" class="white-text">
+                                <span class="card-title white-text">Contact</span>
+                                <p>Da li ste nekada doživeli neki natprirodni događaj? Opišite nam vaše snove</p>
+                                </a>
+                            </div>                        
+                          </div>  
+                            </div>                  
+                     </div>      
+                    </div>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>    
+</body>
+</html>
+<script>
+       window.sr = ScrollReveal();
+      sr.reveal('.kontejner', {
+        duration:2000,
+        delay:2000,
+        origin:'bootom'
+      });
+      sr.reveal('#cloud', {
+        duration:1000,
+        delay:3000,
+        origin:'left',
+        distance:'1100px',
+        rotate: {x:180, y:180}
+      });
+</script>
